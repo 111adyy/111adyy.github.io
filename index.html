@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | Tu Nombre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0d0d0d;
+      color: #eaeaea;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #1a1a1a);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #161616;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #bbb;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #6ee7ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #1f1f1f;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Tu Nombre</h1>
+    <p>Programador · Roblox · Web</p>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p>
+      Programador autodidacta con interés en crear sistemas funcionales,
+      juegos y aplicaciones. Me centro en código limpio y soluciones prácticas.
+    </p>
+  </section>
+
+  <section>
+    <h2>Proyectos</h2>
+
+    <div class="projects">
+      <div class="card">
+        <h3>Juego Roblox</h3>
+        <p>Sistema de cámara, movimiento avanzado y scripts optimizados.</p>
+        <a href="https://github.com/TUUSUARIO/proyecto">Ver código</a>
+      </div>
+
+      <div class="card">
+        <h3>Web Portfolio</h3>
+        <p>Portfolio personal usando HTML y CSS con diseño responsive.</p>
+        <a href="#">Ver demo</a>
+      </div>
+
+      <div class="card">
+        <h3>Script avanzado</h3>
+        <p>Script en Lua para automatización y control de eventos.</p>
+        <a href="#">Detalles</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tecnologías</h2>
+    <div class="skills">
+      <span>Lua</span>
+      <span>Roblox Studio</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Git / GitHub</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>
+      GitHub: <a href="https://github.com/TUUSUARIO">github.com/TUUSUARIO</a><br>
+      Email: tunombre@email.com
+    </p>
+  </section>
+
+  <footer>
+    © 2025 · Tu Nombre
+  </footer>
+
+</body>
+</html>
