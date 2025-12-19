@@ -111,7 +111,7 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  const [active, setActive] = useState('project-2');
+  const [active, setActive] = useState(projects.length > 0 ? projects[0].id : '');
 
   return (
     <div className="-mt-[6rem]">
@@ -124,11 +124,7 @@ const Projects = () => {
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-          These projects demonstrate my expertise with practical examples of
-          some of my work, including brief descriptions and links to code
-          repositories and live demos. They showcase my ability to tackle
-          intricate challenges, adapt to various technologies, and efficiently
-          oversee projects.
+          Proyectos en desarrollo. Próximamente agregaré ejemplos de mi trabajo en backend development, APIs, y sistemas escalables.
         </motion.p>
       </div>
 
@@ -138,17 +134,25 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              index={index}
-              {...project}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
-        </div>
+        {projects.length > 0 ? (
+          <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                index={index}
+                {...project}
+                active={active}
+                handleClick={setActive}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="mt-[50px] text-center">
+            <p className="text-taupe text-[18px]">
+              [Agrega tus proyectos en src/constants/index.js]
+            </p>
+          </div>
+        )}
       </motion.div>
     </div>
   );

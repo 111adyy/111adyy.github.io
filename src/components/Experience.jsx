@@ -65,9 +65,24 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
+          {experiences.length > 0 ? (
+            experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} />
+            ))
+          ) : (
+            <VerticalTimelineElement
+              contentStyle={{
+                background: '#eaeaec',
+                color: '#292929',
+                boxShadow:
+                  'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+              }}
+              iconStyle={{ background: '#333333' }}>
+              <p className="text-taupe text-[18px] text-center">
+                [Agrega tus experiencias en src/constants/index.js]
+              </p>
+            </VerticalTimelineElement>
+          )}
           <VerticalTimelineElement
             contentStyle={{
               background: '#eaeaec',
@@ -102,7 +117,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'resume link', //paste the link to your resume here
+                  '#', // CV/Resume no disponible aún
                   '_blank'
                 )
               }
